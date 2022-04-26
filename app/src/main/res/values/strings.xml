@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Currency</string>
+    <string name="select">From</string>
+    <string name="select1">To</string>
+</resources>
