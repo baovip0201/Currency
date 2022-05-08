@@ -305,17 +305,19 @@ public class MainActivity extends AppCompatActivity {
 
     double result(List<Exchange> list){
         double kq=0;
+        double final_kq=0;
         for(Exchange ex: list){
             if(text_to.getText().toString().equals(ex.getTiente())){
                 System.out.println(Double.parseDouble(input_from.getText().toString()));
                 kq=Double.parseDouble(input_from.getText().toString())*Double.parseDouble(tachSo(ex.getRate()));
+                final_kq=Math.floor(kq*100)/100;
                 System.out.println(text_to.getText().toString());
                 System.out.println(ex.getTiente());
                 System.out.println(Double.parseDouble(tachSo(ex.getRate())));
                 System.out.println(kq);
             }
         }
-        return kq;
+        return final_kq;
     }
     private class CustomTask extends AsyncTask<Void, Void, Void> {
 
